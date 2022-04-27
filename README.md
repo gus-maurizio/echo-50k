@@ -124,7 +124,7 @@ The server launched with a passive server port range of [9000, 9049].
 The client launched with the same server target port range and a connections-per-port count of 10,000, for a total of 500,000 target connections.
 
 
-```
+```bash
 $ ./jdk-19/bin/java --enable-preview -ea -cp conn-scale-1.0.0.jar conn50k.EServer 0.0.0.0 9000 50 16192 16
 Args[host=0.0.0.0, port=9000, portCount=50, backlog=16192, bufferSize=16]
 [0] connections=0, messages=0
@@ -137,7 +137,7 @@ Args[host=0.0.0.0, port=9000, portCount=50, backlog=16192, bufferSize=16]
 [2107645] connections=500000, messages=17423544
 ```
 
-```
+```bash
 [ec2-user@ip-10-39-196-215 ~]$ ./jdk-19/bin/java --enable-preview -ea -cp conn-scale-1.0.0.jar conn50k.EClient 10.39.197.143 9000 50 10000 30000 60000 60000
 Args[host=10.39.197.143, port=9000, portCount=50, numConnections=10000, socketTimeout=30000, warmUp=60000, sleep=60000]
 [0] connections=131, messages=114
