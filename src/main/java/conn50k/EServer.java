@@ -86,6 +86,8 @@ public class EServer {
         Args a = Args.parse(args);
         System.out.println(a);
         System.out.println(UuidCreator.getTimeOrdered());
+        System.out.println(UuidCreator.getTimeOrderedWithMac());
+        System.out.println(UuidCreator.getTimeOrderedWithRandom());
         new EServer(a).run();
     }
 
