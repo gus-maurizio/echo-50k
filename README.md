@@ -74,7 +74,7 @@ export JAVA_HOME=/usr/local/bin/openjdk/jdk-19.jdk/Contents/Home
 export PATH=/usr/local/bin/openjdk/jdk-19.jdk/Contents/Home/bin:/opt/homebrew/opt/python@3.10/bin:/opt/homebrew/opt/python@3.10/bin:/opt/homebrew/opt/python@3.10/bin:/opt/homebrew/opt/openjdk/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 mvn clean package
-echo-50k % java --enable-preview -ea -cp target/conn-scale-1.0.0.jar conn50k.EServer 0.0.0.0 9000 50 16192 16
+java --enable-preview -ea -cp target/conn-scale-1.0.0.jar conn50k.EServer 0.0.0.0 9000 50 16192 16
 
 ```
 

@@ -9,6 +9,9 @@ import java.net.StandardSocketOptions;
 import java.time.Duration;
 import java.util.concurrent.atomic.AtomicLong;
 
+import com.github.f4b6a3.uuid.UuidCreator;
+// UUID uuid = UuidCreator.getTimeBased();
+
 public class EServer {
 
     final Args args;
@@ -82,6 +85,7 @@ public class EServer {
     public static void main(String[] args) throws InterruptedException {
         Args a = Args.parse(args);
         System.out.println(a);
+        System.out.println(UuidCreator.getTimeOrdered());
         new EServer(a).run();
     }
 
